@@ -1,0 +1,17 @@
+frequency: 50  # 50Hz 更新频率
+
+odom0: /odom
+odom0_config: [true, true, false,  # 位置 x, y, z
+               false, false, true, # 方向 roll, pitch, yaw
+               true, true, false,  # 线速度 vx, vy, vz
+               false, false, true, # 角速度 wx, wy, wz
+               false, false, false] # 位置加速度
+
+imu0: /imu/data
+imu0_config: [false, false, false,  # 位置 x, y, z
+              true, true, true,    # 方向 roll, pitch, yaw
+              false, false, false, # 线速度 vx, vy, vz
+              true, true, true,    # 角速度 wx, wy, wz
+              false, false, false] # 位置加速度
+
+imu0_differential: true  # 只使用 IMU 角速度，减少漂移

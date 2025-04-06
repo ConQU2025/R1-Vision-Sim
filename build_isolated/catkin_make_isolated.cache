@@ -1,0 +1,2 @@
+conqu:lidar:robocon25_proof/robocon25_sim:robocon25_proof/robocon_localization:tf_pub:waterplus_map_tools:wpb_home/wpb_home_behaviors:wpb_home/wpb_home_bringup:wpb_home/wpb_home_python:wpb_home/wpb_home_python3:wpb_home/wpb_home_remote:wpb_home/wpb_home_tutorials:wpb_home/wpbh_local_planner:wpr_simulation
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/rc1/catkin_ws/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/rc1/catkin_ws/install_isolated
