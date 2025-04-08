@@ -37,7 +37,7 @@ class ByteArray {
       throw new Error('Unable to serialize array field data - length must be 10')
     }
     // Serialize message field [data]
-    bufferOffset = _arraySerializer.int8(obj.data, buffer, bufferOffset, 10);
+    bufferOffset = _arraySerializer.uint8(obj.data, buffer, bufferOffset, 10);
     return bufferOffset;
   }
 
@@ -46,7 +46,7 @@ class ByteArray {
     let len;
     let data = new ByteArray(null);
     // Deserialize message field [data]
-    data.data = _arrayDeserializer.int8(buffer, bufferOffset, 10)
+    data.data = _arrayDeserializer.uint8(buffer, bufferOffset, 10)
     return data;
   }
 
@@ -61,13 +61,13 @@ class ByteArray {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '56792dc2ab08b5a97efe471984a66192';
+    return '0c05a05733f13fb160c661ca1798fdba';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    int8[10] data
+    uint8[10] data
     `;
   }
 

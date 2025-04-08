@@ -4,30 +4,33 @@
 #include <std_msgs/String.h>
 #include <sstream>
 
-serial::Serial ser;
+void sendCallback(const conqu::ByteArray::ConstPtr& msg, serial::Serial& ser) {
+    try {
+        size_t data_size = msg->data.size();
+        ser.write((uint8_t*)msg->data.data(), data_size);
 
-void sendCallback(const conqu::ByteArray::ConstPtr& msg) {
-    // 直接发送 10 个字节的原始数据
-    ser.write((uint8_t*)msg->data.data(), 10);
-
-    // 打印发送的数据（十六进制）
-    std::ostringstream oss;
-    for (int i = 0; i < 10; i++) {
-        oss << std::hex << std::setw(2) << std::setfill('0') << (int)msg->data[i] << " ";
+        std::ostringstream oss;
+        for (size_t i = 0; i < data_size; i++) {
+            oss << std::hex << std::setw(2) << std::setfill('0') << static_cast<unsigned>(msg->data[i]) << " ";
+        }
+        std::string hex_str = oss.str();
+        ROS_INFO("Sent: [%s]", hex_str.c_str());
+    } catch (const serial::IOException& e) {
+        ROS_ERROR("Failed to send data: %s", e.what());
     }
-    ROS_INFO("Sent: [%s]", oss.str().c_str());
 }
 
 int main(int argc, char** argv) {
     ros::init(argc, argv, "serial_comm_cpp");
     ros::NodeHandle nh;
     ros::NodeHandle priv_nh("~");
-    
+
     std::string port;
     int baudrate;
     priv_nh.param<std::string>("port", port, "/dev/ttyUSB0");
     priv_nh.param("baud", baudrate, 115200);
-    
+
+    serial::Serial ser;
     try {
         ser.setPort(port);
         ser.setBaudrate(baudrate);
@@ -39,11 +42,11 @@ int main(int argc, char** argv) {
         ROS_ERROR_STREAM("Failed to open serial port: " << e.what());
         return -1;
     }
-    
+
     ros::Publisher pub = nh.advertise<std_msgs::String>("serial_receive", 10);
-    ros::Subscriber sub = nh.subscribe("serial_send", 10, sendCallback);
-    
-    ros::Rate loop_rate(100); // 100Hz
+    ros::Subscriber sub = nh.subscribe<conqu::ByteArray>("serial_send", 10, boost::bind(sendCallback, _1, boost::ref(ser)));
+
+    ros::Rate loop_rate(100);
     while (ros::ok()) {
         if (ser.available()) {
             std_msgs::String msg;
@@ -54,7 +57,7 @@ int main(int argc, char** argv) {
         ros::spinOnce();
         loop_rate.sleep();
     }
-    
+
     ser.close();
     return 0;
 }

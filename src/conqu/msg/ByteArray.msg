@@ -1,1 +1,1 @@
-int8[10] data
+uint8[10] data

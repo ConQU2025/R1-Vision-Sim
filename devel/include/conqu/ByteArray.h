@@ -35,7 +35,7 @@ struct ByteArray_
 
 
 
-   typedef boost::array<int8_t, 10>  _data_type;
+   typedef boost::array<uint8_t, 10>  _data_type;
   _data_type data;
 
 
@@ -124,12 +124,12 @@ struct MD5Sum< ::conqu::ByteArray_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "56792dc2ab08b5a97efe471984a66192";
+    return "0c05a05733f13fb160c661ca1798fdba";
   }
 
   static const char* value(const ::conqu::ByteArray_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x56792dc2ab08b5a9ULL;
-  static const uint64_t static_value2 = 0x7efe471984a66192ULL;
+  static const uint64_t static_value1 = 0x0c05a05733f13fb1ULL;
+  static const uint64_t static_value2 = 0x60c661ca1798fdbaULL;
 };
 
 template<class ContainerAllocator>
@@ -148,7 +148,7 @@ struct Definition< ::conqu::ByteArray_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "int8[10] data\n"
+    return "uint8[10] data\n"
 ;
   }
 
@@ -190,7 +190,7 @@ struct Printer< ::conqu::ByteArray_<ContainerAllocator> >
     for (size_t i = 0; i < v.data.size(); ++i)
     {
       s << indent << "  data[" << i << "]: ";
-      Printer<int8_t>::stream(s, indent + "  ", v.data[i]);
+      Printer<uint8_t>::stream(s, indent + "  ", v.data[i]);
     }
   }
 };

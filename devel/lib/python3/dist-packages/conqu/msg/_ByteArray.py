@@ -8,12 +8,12 @@ import struct
 
 
 class ByteArray(genpy.Message):
-  _md5sum = "56792dc2ab08b5a97efe471984a66192"
+  _md5sum = "0c05a05733f13fb160c661ca1798fdba"
   _type = "conqu/ByteArray"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """int8[10] data"""
+  _full_text = """uint8[10] data"""
   __slots__ = ['data']
-  _slot_types = ['int8[10]']
+  _slot_types = ['uint8[10]']
 
   def __init__(self, *args, **kwds):
     """
@@ -33,9 +33,9 @@ class ByteArray(genpy.Message):
       super(ByteArray, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
       if self.data is None:
-        self.data = [0] * 10
+        self.data = b'\0'*10
     else:
-      self.data = [0] * 10
+      self.data = b'\0'*10
 
   def _get_types(self):
     """
@@ -49,7 +49,12 @@ class ByteArray(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      buff.write(_get_struct_10b().pack(*self.data))
+      _x = self.data
+      # - if encoded as a list instead, serialize as bytes instead of string
+      if type(_x) in [list, tuple]:
+        buff.write(_get_struct_10B().pack(*_x))
+      else:
+        buff.write(_get_struct_10s().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -64,7 +69,7 @@ class ByteArray(genpy.Message):
       end = 0
       start = end
       end += 10
-      self.data = _get_struct_10b().unpack(str[start:end])
+      self.data = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -77,7 +82,12 @@ class ByteArray(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      buff.write(self.data.tostring())
+      _x = self.data
+      # - if encoded as a list instead, serialize as bytes instead of string
+      if type(_x) in [list, tuple]:
+        buff.write(_get_struct_10B().pack(*_x))
+      else:
+        buff.write(_get_struct_10s().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -93,7 +103,7 @@ class ByteArray(genpy.Message):
       end = 0
       start = end
       end += 10
-      self.data = numpy.frombuffer(str[start:end], dtype=numpy.int8, count=10)
+      self.data = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -102,9 +112,15 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_10b = None
-def _get_struct_10b():
-    global _struct_10b
-    if _struct_10b is None:
-        _struct_10b = struct.Struct("<10b")
-    return _struct_10b
+_struct_10B = None
+def _get_struct_10B():
+    global _struct_10B
+    if _struct_10B is None:
+        _struct_10B = struct.Struct("<10B")
+    return _struct_10B
+_struct_10s = None
+def _get_struct_10s():
+    global _struct_10s
+    if _struct_10s is None:
+        _struct_10s = struct.Struct("<10s")
+    return _struct_10s

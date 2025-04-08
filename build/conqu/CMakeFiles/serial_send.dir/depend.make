@@ -59,6 +59,10 @@ conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/includ
 conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/ros/wall_timer.h
 conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
+conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/std_msgs/Float32.h
+conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/std_msgs/MultiArrayDimension.h
+conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/std_msgs/MultiArrayLayout.h
+conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/std_msgs/UInt8MultiArray.h
 conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 conqu/CMakeFiles/serial_send.dir/src/serial_sender.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
 
