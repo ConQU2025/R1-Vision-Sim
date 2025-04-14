@@ -1,0 +1,8 @@
+prefix=/home/rc1/catkin_ws/install_isolated
+
+Name: lidar
+Description: Description of lidar
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

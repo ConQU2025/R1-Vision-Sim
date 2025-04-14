@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/rc1/catkin_ws/devel_isolated/robocon_localization/setup.sh
