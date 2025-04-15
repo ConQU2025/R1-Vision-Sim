@@ -1,2 +1,2 @@
-conqu:lidar:robocon25_proof/robocon25_sim:robocon25_proof/robocon_localization:tf_pub:wpr_simulation
--DCATKIN_DEVEL_PREFIX=/home/rc/R1-Vision/devel -DCMAKE_INSTALL_PREFIX=/home/rc/R1-Vision/install -G Unix Makefiles
+conqu:lidar:tf_pub
+-DCATKIN_DEVEL_PREFIX=/home/rc1/new_ws/R1-Vision-Sim/devel -DCMAKE_INSTALL_PREFIX=/home/rc1/new_ws/R1-Vision-Sim/install -G Unix Makefiles

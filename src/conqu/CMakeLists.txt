@@ -209,7 +209,21 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-# 添加 serial_node 可执行文件
+# 添加可执行文件
+add_executable(second src/second_node.cpp)
+target_link_libraries(second
+  ${catkin_LIBRARIES}
+  ${SERIAL_LIBRARIES}
+)
+add_dependencies(second ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_executable(sim src/simulation.cpp)
+target_link_libraries(sim
+  ${catkin_LIBRARIES}
+  ${SERIAL_LIBRARIES}
+)
+add_dependencies(sim ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 add_executable(serial_node src/serial.cpp)
 target_link_libraries(serial_node
   ${catkin_LIBRARIES}

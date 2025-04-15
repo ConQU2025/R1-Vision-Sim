@@ -1,4 +1,4 @@
-prefix=/home/rc/R1-Vision/install
+prefix=/home/rc1/new_ws/R1-Vision-Sim/install
 
 Name: tf_pub
 Description: Description of tf_pub

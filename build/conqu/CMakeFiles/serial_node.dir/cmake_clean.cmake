@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rc/R1-Vision/devel/lib/conqu/serial_node"
-  "/home/rc/R1-Vision/devel/lib/conqu/serial_node.pdb"
+  "/home/rc1/new_ws/R1-Vision-Sim/devel/lib/conqu/serial_node"
+  "/home/rc1/new_ws/R1-Vision-Sim/devel/lib/conqu/serial_node.pdb"
   "CMakeFiles/serial_node.dir/src/serial.cpp.o"
 )
 

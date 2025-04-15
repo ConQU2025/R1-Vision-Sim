@@ -1,8 +1,8 @@
-# Install script for directory: /home/rc/R1-Vision/src/lidar
+# Install script for directory: /home/rc1/new_ws/R1-Vision-Sim/src/lidar
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rc/R1-Vision/install")
+  set(CMAKE_INSTALL_PREFIX "/home/rc1/new_ws/R1-Vision-Sim/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rc/R1-Vision/build/lidar/catkin_generated/installspace/lidar.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rc1/new_ws/R1-Vision-Sim/build/lidar/catkin_generated/installspace/lidar.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lidar/cmake" TYPE FILE FILES
-    "/home/rc/R1-Vision/build/lidar/catkin_generated/installspace/lidarConfig.cmake"
-    "/home/rc/R1-Vision/build/lidar/catkin_generated/installspace/lidarConfig-version.cmake"
+    "/home/rc1/new_ws/R1-Vision-Sim/build/lidar/catkin_generated/installspace/lidarConfig.cmake"
+    "/home/rc1/new_ws/R1-Vision-Sim/build/lidar/catkin_generated/installspace/lidarConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lidar" TYPE FILE FILES "/home/rc/R1-Vision/src/lidar/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lidar" TYPE FILE FILES "/home/rc1/new_ws/R1-Vision-Sim/src/lidar/package.xml")
 endif()
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rc/R1-Vision/src
+CMAKE_SOURCE_DIR = /home/rc1/new_ws/R1-Vision-Sim/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rc/R1-Vision/build
+CMAKE_BINARY_DIR = /home/rc1/new_ws/R1-Vision-Sim/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/rc/R1-Vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rc/R1-Vision/src /home/rc/R1-Vision/src /home/rc/R1-Vision/build /home/rc/R1-Vision/build /home/rc/R1-Vision/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rc1/new_ws/R1-Vision-Sim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rc1/new_ws/R1-Vision-Sim/src /home/rc1/new_ws/R1-Vision-Sim/src /home/rc1/new_ws/R1-Vision-Sim/build /home/rc1/new_ws/R1-Vision-Sim/build /home/rc1/new_ws/R1-Vision-Sim/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

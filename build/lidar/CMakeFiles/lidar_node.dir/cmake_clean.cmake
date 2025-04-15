@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rc/R1-Vision/devel/lib/lidar/lidar_node"
-  "/home/rc/R1-Vision/devel/lib/lidar/lidar_node.pdb"
+  "/home/rc1/new_ws/R1-Vision-Sim/devel/lib/lidar/lidar_node"
+  "/home/rc1/new_ws/R1-Vision-Sim/devel/lib/lidar/lidar_node.pdb"
   "CMakeFiles/lidar_node.dir/src/lidar_node.cpp.o"
 )
 
