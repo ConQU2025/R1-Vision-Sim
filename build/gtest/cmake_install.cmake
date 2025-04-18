@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rc1/new_ws/R1-Vision-Sim/install")
+  set(CMAKE_INSTALL_PREFIX "/home/rc1/store/R1-Vision-Sim/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/rc1/new_ws/R1-Vision-Sim/build/gtest/googlemock/cmake_install.cmake")
+  include("/home/rc1/store/R1-Vision-Sim/build/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

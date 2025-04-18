@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rc1/new_ws/R1-Vision-Sim/devel/include/conqu/ByteArray.h
+/home/rc1/store/R1-Vision-Sim/devel/include/conqu/ByteArray.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rc1/new_ws/R1-Vision-Sim/src/conqu/src/serial_sender.cpp
+/home/rc1/store/R1-Vision-Sim/src/conqu/src/serial_sender.cpp
 ros/ros.h
 -
 conqu/ByteArray.h

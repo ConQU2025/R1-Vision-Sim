@@ -1,4 +1,4 @@
-prefix=/home/rc1/new_ws/R1-Vision-Sim/install
+prefix=/home/rc1/store/R1-Vision-Sim/install
 
 Name: conqu
 Description: Description of conqu

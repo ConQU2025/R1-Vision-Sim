@@ -1,8 +1,8 @@
-# Install script for directory: /home/rc1/new_ws/R1-Vision-Sim/src/tf_pub
+# Install script for directory: /home/rc1/store/R1-Vision-Sim/src/tf_pub
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rc1/new_ws/R1-Vision-Sim/install")
+  set(CMAKE_INSTALL_PREFIX "/home/rc1/store/R1-Vision-Sim/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rc1/new_ws/R1-Vision-Sim/build/tf_pub/catkin_generated/installspace/tf_pub.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rc1/store/R1-Vision-Sim/build/tf_pub/catkin_generated/installspace/tf_pub.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf_pub/cmake" TYPE FILE FILES
-    "/home/rc1/new_ws/R1-Vision-Sim/build/tf_pub/catkin_generated/installspace/tf_pubConfig.cmake"
-    "/home/rc1/new_ws/R1-Vision-Sim/build/tf_pub/catkin_generated/installspace/tf_pubConfig-version.cmake"
+    "/home/rc1/store/R1-Vision-Sim/build/tf_pub/catkin_generated/installspace/tf_pubConfig.cmake"
+    "/home/rc1/store/R1-Vision-Sim/build/tf_pub/catkin_generated/installspace/tf_pubConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf_pub" TYPE FILE FILES "/home/rc1/new_ws/R1-Vision-Sim/src/tf_pub/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf_pub" TYPE FILE FILES "/home/rc1/store/R1-Vision-Sim/src/tf_pub/package.xml")
 endif()
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rc1/new_ws/R1-Vision-Sim/devel/lib/python3/dist-packages/conqu/msg/_ByteArray.py"
-  "/home/rc1/new_ws/R1-Vision-Sim/devel/lib/python3/dist-packages/conqu/msg/__init__.py"
+  "/home/rc1/store/R1-Vision-Sim/devel/lib/python3/dist-packages/conqu/msg/_ByteArray.py"
+  "/home/rc1/store/R1-Vision-Sim/devel/lib/python3/dist-packages/conqu/msg/__init__.py"
   "CMakeFiles/conqu_generate_messages_py"
 )
 

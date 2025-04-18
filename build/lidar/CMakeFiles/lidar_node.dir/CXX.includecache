@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rc1/new_ws/R1-Vision-Sim/src/lidar/src/lidar_node.cpp
+/home/rc1/store/R1-Vision-Sim/src/lidar/src/lidar_node.cpp
 ros/ros.h
 -
 sensor_msgs/LaserScan.h

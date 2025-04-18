@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/googletest")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/rc1/new_ws/R1-Vision-Sim/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/rc1/store/R1-Vision-Sim/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

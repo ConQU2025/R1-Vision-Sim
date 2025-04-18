@@ -1,4 +1,4 @@
-prefix=/home/rc1/new_ws/R1-Vision-Sim/devel
+prefix=/home/rc1/store/R1-Vision-Sim/devel
 
 Name: lidar
 Description: Description of lidar

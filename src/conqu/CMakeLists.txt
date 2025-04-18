@@ -210,6 +210,28 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 # 添加可执行文件
+add_executable(calculate src/cal_vector.cpp)
+target_link_libraries(calculate
+  ${catkin_LIBRARIES}
+  ${SERIAL_LIBRARIES}
+)
+
+add_dependencies(calculate ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_executable(try src/16bit_try.cpp)
+target_link_libraries(try
+  ${catkin_LIBRARIES}
+  ${SERIAL_LIBRARIES}
+)
+add_dependencies(try ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_executable(data_pro src/data_process.cpp)
+target_link_libraries(data_pro
+  ${catkin_LIBRARIES}
+  ${SERIAL_LIBRARIES}
+)
+add_dependencies(data_pro ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 add_executable(second src/second_node.cpp)
 target_link_libraries(second
   ${catkin_LIBRARIES}
@@ -230,6 +252,7 @@ target_link_libraries(serial_node
   ${SERIAL_LIBRARIES}
 )
 add_dependencies(serial_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 # 添加 serial_send 可执行文件
 add_executable(serial_send src/serial_sender.cpp)
 target_link_libraries(serial_send

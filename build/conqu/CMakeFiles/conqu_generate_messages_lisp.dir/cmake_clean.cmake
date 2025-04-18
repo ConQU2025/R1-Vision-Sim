@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/rc1/new_ws/R1-Vision-Sim/devel/share/common-lisp/ros/conqu/msg/ByteArray.lisp"
+  "/home/rc1/store/R1-Vision-Sim/devel/share/common-lisp/ros/conqu/msg/ByteArray.lisp"
   "CMakeFiles/conqu_generate_messages_lisp"
 )
 
