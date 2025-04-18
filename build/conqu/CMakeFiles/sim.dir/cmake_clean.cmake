@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rc1/store/R1-Vision-Sim/devel/lib/conqu/sim"
-  "/home/rc1/store/R1-Vision-Sim/devel/lib/conqu/sim.pdb"
+  "/home/rc1/new/R1-Vision-Sim/devel/lib/conqu/sim"
+  "/home/rc1/new/R1-Vision-Sim/devel/lib/conqu/sim.pdb"
   "CMakeFiles/sim.dir/src/simulation.cpp.o"
 )
 

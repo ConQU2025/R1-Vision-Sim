@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rc1/store/R1-Vision-Sim/devel/lib/conqu/second"
-  "/home/rc1/store/R1-Vision-Sim/devel/lib/conqu/second.pdb"
+  "/home/rc1/new/R1-Vision-Sim/devel/lib/conqu/second"
+  "/home/rc1/new/R1-Vision-Sim/devel/lib/conqu/second.pdb"
   "CMakeFiles/second.dir/src/second_node.cpp.o"
 )
 

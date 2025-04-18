@@ -4,6 +4,7 @@
 #include <std_msgs/String.h>
 #include <sstream>
 #include <iomanip>
+#include <std_msgs/UInt8MultiArray.h>
 
 void sendCallback(const conqu::ByteArray::ConstPtr& msg, serial::Serial& ser) {
     try {
@@ -48,7 +49,7 @@ int main(int argc, char** argv) {
     }
 
     // 初始化发布者和订阅者
-    ros::Publisher pub = nh.advertise<std_msgs::String>("serial_receive", 10);
+    ros::Publisher pub = nh.advertise<std_msgs::UInt8MultiArray>("serial_receive", 10);
     ros::Subscriber sub = nh.subscribe<conqu::ByteArray>("serial_send", 10, boost::bind(sendCallback, _1, boost::ref(ser)));
 
     ros::Rate loop_rate(100); // 100Hz
@@ -61,22 +62,21 @@ int main(int argc, char** argv) {
                 size_t bytes_available = ser.available();
                 uint8_t data[bytes_available];
                 size_t bytes_read = ser.read(data, bytes_available);
-                ROS_INFO("Bytes available: %zu, Bytes read: %zu", bytes_available, bytes_read);
+                //ROS_INFO("Bytes available: %zu, Bytes read: %zu", bytes_available, bytes_read);
                 
 
                 // 处理缓冲区数据（这里假设按行或完整数据包处理）
                 std::ostringstream hex_oss;
-                
+                // 发布接收到的原始数据
+                std_msgs::UInt8MultiArray msg;
+                msg.data.assign(data, data + bytes_read);
                 for (size_t i = 0; i < bytes_read; i++) {
                     // 转换为十六进制用于日志
                     ROS_INFO("Received byte: %02x", data[i]);
                     hex_oss << std::hex << std::setw(2) << std::setfill('0') << static_cast<unsigned>(data[i]) << " ";
-                    buffer.push_back(data[i]);
+                    
                 }
 
-                // 发布接收到的原始数据
-                std_msgs::String msg;
-                msg.data = hex_oss.str(); // 发布ASCII格式，或可改为hex_oss.str()发布十六进制
                 pub.publish(msg);
 
                 // 记录日志

@@ -1,8 +1,8 @@
-prefix=/home/rc1/store/R1-Vision-Sim/devel
+prefix=/home/rc1/new/R1-Vision-Sim/devel
 
 Name: conqu
 Description: Description of conqu
 Version: 0.0.0
-Cflags: -I/home/rc1/store/R1-Vision-Sim/devel/include
+Cflags: -I/home/rc1/new/R1-Vision-Sim/devel/include
 Libs: -L${prefix}/lib 
 Requires: roscpp std_msgs message_runtime

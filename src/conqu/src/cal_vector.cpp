@@ -6,9 +6,9 @@
 #include <cmath>
 
 // 麦克纳姆轮解算参数
-const double WHEEL_RADIUS = 0.05;  // 轮子半径 (单位: 米)
-const double L = 0.2;             // 机器人前后轮中心距的一半 (单位: 米)
-const double W = 0.2;             // 机器人左右轮中心距的一半 (单位: 米)
+const double WHEEL_RADIUS = 0.154;  // 轮子半径 (单位: 米)
+const double L = 0.393/2;             // 机器人前后轮中心距的一半 (单位: 米)
+const double W = 0.49/2;             // 机器人左右轮中心距的一半 (单位: 米)
 
 ros::Publisher odom_pub;  // 发布解算后的里程计数据
 
@@ -29,13 +29,14 @@ void callback(const std_msgs::Int32MultiArray::ConstPtr& msg) {
         static_cast<double>(data[3])
     };
     for (int i = 0; i < 4; ++i) {
-        wheel_speeds[i] = data[i]*2*M_PI / (100.0 * 60.0); // 转化为rad/s
+        wheel_speeds[i] = data[i]*2*M_PI / 60.0; // 转化为rad/s,得到角速度
     }
 
     double yaw_speed = static_cast<double>(data[4]);
+    yaw_speed = yaw_speed /100;
 
     // 麦克纳姆轮解算公式
-    double Vx = (wheel_speeds[0] + wheel_speeds[1] + wheel_speeds[2] + wheel_speeds[3]) * (WHEEL_RADIUS / 4.0);
+    double Vx = (wheel_speeds[0] + wheel_speeds[1] + wheel_speeds[2] + wheel_speeds[3])*sqrt(2)/2* (WHEEL_RADIUS / 4.0);
     double Vy = (-wheel_speeds[0] + wheel_speeds[1] + wheel_speeds[2] - wheel_speeds[3]) * (WHEEL_RADIUS / 4.0);
     double omega = (-wheel_speeds[0] + wheel_speeds[1] - wheel_speeds[2] + wheel_speeds[3]) * (WHEEL_RADIUS / (4.0 * (L + W)));
 

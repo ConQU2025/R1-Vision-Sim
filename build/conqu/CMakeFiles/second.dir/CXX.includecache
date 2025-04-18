@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rc1/store/R1-Vision-Sim/src/conqu/src/second_node.cpp
+/home/rc1/new/R1-Vision-Sim/src/conqu/src/second_node.cpp
 ros/ros.h
 -
 std_msgs/Float32.h

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "lidar"
-PROJECT_SPACE_DIR = "/home/rc1/store/R1-Vision-Sim/install"
+PROJECT_SPACE_DIR = "/home/rc1/new/R1-Vision-Sim/install"
 PROJECT_VERSION = "0.0.0"

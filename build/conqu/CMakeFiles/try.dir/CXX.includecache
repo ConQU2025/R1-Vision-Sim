@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rc1/store/R1-Vision-Sim/src/conqu/src/16bit_try.cpp
+/home/rc1/new/R1-Vision-Sim/src/conqu/src/16bit_try.cpp
 ros/ros.h
 -
 std_msgs/UInt8MultiArray.h

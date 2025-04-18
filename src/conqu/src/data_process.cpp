@@ -31,9 +31,9 @@ void callback(const std_msgs::UInt8MultiArray::ConstPtr& msg) {
         // 合并每两位数据
         std_msgs::Int32MultiArray output_msg;
         for (size_t i = 0; i < payload.size(); i += 2) {
-            uint16_t high = payload[i];       // 高八位
-            uint16_t low = payload[i + 1];   // 低八位
-            int32_t combined = (high << 8) | low;  // 合并为 16 位整数
+            uint8_t high = payload[i];       // 高八位
+            uint8_t low = payload[i + 1];   // 低八位
+            int16_t combined = (high << 8) | low;  // 合并为 16 位整数
             output_msg.data.push_back(combined);   // 存入消息
         }
 
@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
     ros::NodeHandle nh;
 
     // 订阅话题
-    ros::Subscriber sub = nh.subscribe("hex_data", 10, callback);
+    ros::Subscriber sub = nh.subscribe("serial_receive", 10, callback);
 
     // 发布处理后的数据
     processed_data_pub = nh.advertise<std_msgs::Int32MultiArray>("processed_data", 10);

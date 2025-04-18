@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rc1/store/R1-Vision-Sim/devel/include/conqu/ByteArray.h
+/home/rc1/new/R1-Vision-Sim/devel/include/conqu/ByteArray.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rc1/store/R1-Vision-Sim/src/conqu/src/serial.cpp
+/home/rc1/new/R1-Vision-Sim/src/conqu/src/serial.cpp
 ros/ros.h
 -
 serial/serial.h
@@ -34,6 +34,8 @@ std_msgs/String.h
 sstream
 -
 iomanip
+-
+std_msgs/UInt8MultiArray.h
 -
 
 /opt/ros/noetic/include/ros/advertise_options.h
@@ -710,6 +712,40 @@ stdio.h
 stdint.h
 -
 
+/opt/ros/noetic/include/std_msgs/MultiArrayDimension.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/noetic/include/std_msgs/MultiArrayLayout.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/MultiArrayDimension.h
+-
+
 /opt/ros/noetic/include/std_msgs/String.h
 string
 -
@@ -724,6 +760,24 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
+-
+
+/opt/ros/noetic/include/std_msgs/UInt8MultiArray.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/MultiArrayLayout.h
 -
 
 /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h

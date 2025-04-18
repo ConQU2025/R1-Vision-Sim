@@ -1,7 +1,7 @@
 <launch>
     <!-- 启动 try 节点 -->
-    <node pkg="conqu" type="try" name="try_node" output="screen" />
-
+    <!-- <node pkg="conqu" type="try" name="try_node" output="screen" /> -->
+    <node pkg="conqu" type="serial_node" name="serial_ser_pub" output="screen" />
     <!-- 启动 data_pro 节点 -->
     <node pkg="conqu" type="data_pro" name="data_pro_node" output="screen" />
 

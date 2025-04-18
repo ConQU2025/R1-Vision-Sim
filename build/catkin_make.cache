@@ -1,2 +1,2 @@
 conqu:lidar:tf_pub
--DCATKIN_DEVEL_PREFIX=/home/rc1/store/R1-Vision-Sim/devel -DCMAKE_INSTALL_PREFIX=/home/rc1/store/R1-Vision-Sim/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/rc1/new/R1-Vision-Sim/devel -DCMAKE_INSTALL_PREFIX=/home/rc1/new/R1-Vision-Sim/install -G Unix Makefiles

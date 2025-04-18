@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rc1/store/R1-Vision-Sim/devel/lib/conqu/serial_send"
-  "/home/rc1/store/R1-Vision-Sim/devel/lib/conqu/serial_send.pdb"
+  "/home/rc1/new/R1-Vision-Sim/devel/lib/conqu/serial_send"
+  "/home/rc1/new/R1-Vision-Sim/devel/lib/conqu/serial_send.pdb"
   "CMakeFiles/serial_send.dir/src/serial_sender.cpp.o"
 )
 
